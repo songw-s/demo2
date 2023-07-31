@@ -3,7 +3,7 @@
     <ul>
       <li v-for="item in items" v-bind:key="item.foreast">{{ item.foreast }}</li>
     </ul>
-    <button v-on:click="refreshItems">button</button>
+    <button v-on:click="refreshItems">天気</button>
   </div>
 </template>
 <script>
