@@ -1,15 +1,15 @@
 <template>
     <div>
-        <p>child: {{name}}</p>
+        <p>child: {{hello}}</p>
         <button v-on:click="changeC">changeChild</button>
     </div>
 </template>
 <script>
 export default {
-  props: ['name'],
+  props: ['hello'],
   methods: {
     changeC () {
-      this.$emit('update:name', 'newHello')
+      this.$emit('update:hello', 'newHello')
     }
   }
 }
