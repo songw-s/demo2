@@ -9,7 +9,7 @@ export default {
   props: ['name'],
   methods: {
     changeC () {
-      this.$emit('update:name', 'newChild')
+      this.$emit('update:name', 'newHello')
     }
   }
 }

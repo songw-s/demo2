@@ -3,21 +3,25 @@
     <ul>
       <li v-for="item in items" v-bind:key="item.foreast">{{ item.foreast }}</li>
     </ul>
-    <input v-model="name">
+    <input v-model="hello">
     <button v-on:click="refreshItems">天気</button>
-    <HI v-bind:name.sync="name" />
+    <HI v-bind:hello.sync="hello" />
+    <input v-model="second">
+    <SCH v-bind:second.sync="second" />
   </div>
 </template>
 <script>
 import mixin from '~/mixins/mixin'
 import HI from '~/components/HomeIndex'
+import SCH from '~/components/SecondHome'
 export default {
   mixins: [mixin],
-  components: { HI },
+  components: { HI, SCH },
   data () {
     return {
       items: [{ foreast: '' }, { foreast: '' }],
-      name: 'hello'
+      hello: 'hello',
+      second: 'second'
     }
   },
   methods: {
