@@ -13,6 +13,9 @@
     <ul>
       <input v-bind:value="foreachValueList" />
     </ul>
+    <ul>
+      <input v-bind:value="calculation" />
+    </ul>
   </div>
 </template>
 <script>
@@ -32,6 +35,16 @@ export default {
   mounted () {
     this.FreshForeachList()
   },
+  computed: {
+    calculation () {
+      let calVbindValueCase = [1, 2, 3]
+      let vbindValueCase = []
+      for (let i in calVbindValueCase) {
+        vbindValueCase.push(calVbindValueCase[i])
+      }
+      return vbindValueCase
+    }
+  },
   methods: {
     showVbindMethod () {
       this.showVbind = 'bbb'
@@ -39,7 +52,6 @@ export default {
     FreshForeachList () {
       const forValList = { 'keyword1': 'kw1', 'keyword2': 'kw2' }
       for (let i in forValList) {
-        console.log(forValList[i])
         this.foreachValueList.push(forValList[i])
       }
     }
